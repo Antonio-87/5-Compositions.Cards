@@ -2,11 +2,14 @@ import { PropsWithChildren } from "react";
 
 const Card = ({
   className,
+  style,
   children,
-}: PropsWithChildren<{ className: string }>) => {
+}: PropsWithChildren<{ className: string; style: string }>) => {
   return (
     <>
-      <div className={className}>{children}</div>;
+      <div className={className} style={{ width: style }}>
+        {children}
+      </div>
     </>
   );
 };
